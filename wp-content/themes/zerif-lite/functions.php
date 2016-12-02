@@ -1266,7 +1266,29 @@ class zerif_team_widget extends WP_Widget{
 	                            </a>
                             </li>
                             <?php
-                        endif; ?>
+                        endif; 
+                        if ( !empty($instance['ln_link']) ): ?>
+                            <li>
+                                <a href="<?php echo apply_filters('widget_title', $instance['ln_link']); ?>" target="<?php echo $zerif_team_target; ?>">
+                                    <?php
+                                    if(!empty($instance['name'])) { ?>
+                                        <span class="sr-only">
+                                            <?php _e( 'Xing account of', 'zerif-lite' ); ?>
+                                            <?php echo apply_filters('widget_title', $instance['name']); ?>
+                                        </span>
+                                        <?php
+                                    } ?>
+                                    <i class="fa fa-xing"></i>
+                                </a>
+                            </li>
+                            <?php
+                        endif; 
+
+
+
+
+                        ?>
+
 
                     </ul>
 

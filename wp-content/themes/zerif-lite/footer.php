@@ -35,6 +35,7 @@
 			$zerif_socials_behance = get_theme_mod('zerif_socials_behance','#');
 			$zerif_socials_dribbble = get_theme_mod('zerif_socials_dribbble','#');
 			$zerif_socials_instagram = get_theme_mod('zerif_socials_instagram');
+			$zerif_socials_xing = get_theme_mod('zerif_socials_xing');
 
 			$zerif_accessibility = get_theme_mod('zerif_accessibility');
 			$zerif_copyright = get_theme_mod('zerif_copyright');
@@ -162,6 +163,10 @@
 							/* instagram */
 							if( !empty($zerif_socials_instagram) ):
 								echo '<li><a'.$attribut_new_tab.' href="'.esc_url($zerif_socials_instagram).'"><span class="sr-only">' . __( 'Go to Instagram', 'zerif-lite' ) . '</span> <i class="fa fa-instagram"></i></a></li>';
+							endif;
+							/* xing */
+							if( !empty($zerif_socials_xing) ):
+								echo '<li><a'.$attribut_new_tab.' href="'.esc_url($zerif_socials_xing).'"><span class="sr-only">' . __( 'Go to Xing', 'zerif-lite' ) . '</span> <i class="fa fa-xing"></i></a></li>';
 							endif;
 							echo '</ul>';
 						endif;

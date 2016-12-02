@@ -244,6 +244,20 @@ function zerif_customize_register( $wp_customize ) {
 			'priority' => 9,
 		));
 
+       /* xing */
+		$wp_customize->add_setting( 'zerif_socials_xing', array(
+			'sanitize_callback' => 'esc_url_raw',
+		));
+
+		$wp_customize->add_control( 'zerif_socials_xing', array(
+			'label'    => __( 'Xing link', 'zerif-lite' ),
+			'section'  => 'zerif_general_socials_section',
+			'priority' => 9,
+		));
+
+
+
+
 		$wp_customize->add_section( 'zerif_general_footer_section' , array(
 			'title' => __( 'Footer Content', 'zerif-lite' ),
 			'priority' => 32,
