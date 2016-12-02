@@ -296,7 +296,26 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 						echo '<div class="row">';
 							echo do_shortcode('[pirate_forms]');
+
 						echo '</div>';
+						echo '
+
+
+						<div id="map" style="-webkit-border-radius: 10px!important;"></div>
+					<script>
+						function myMap() {
+							var myCenter = new google.maps.LatLng(53.55215,10.00164);
+							var mapCanvas = document.getElementById("map");
+							var mapOptions = {center: myCenter, zoom: 15};
+							var map = new google.maps.Map(mapCanvas, mapOptions); 
+							var marker = new google.maps.Marker({position:myCenter});
+							marker.setMap(map);
+						}
+					</script>
+
+					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAY7_AwOvVF1KgOEYF7bTqQGn3tyV-LeHo&callback=myMap" ></script>
+				
+				</div>';
 
 					else:
 					?>

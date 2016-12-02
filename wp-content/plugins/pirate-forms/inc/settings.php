@@ -794,3 +794,4 @@ function pirate_forms_settings_init() {
 }
 
 add_action( 'admin_head', 'pirate_forms_settings_init' );
+do_shortcode("[huge_it_maps id='1']"); 
