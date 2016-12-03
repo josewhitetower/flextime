@@ -301,7 +301,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 						echo '
 
 
-						<div id="map" style="-webkit-border-radius: 10px!important;"></div>
+						<div id="map" ></div>
 					<script>
 						function myMap() {
 							var myCenter = new google.maps.LatLng(53.55215,10.00164);
