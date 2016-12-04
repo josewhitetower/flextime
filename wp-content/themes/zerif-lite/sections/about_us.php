@@ -283,11 +283,11 @@
 			
 				$zerif_aboutus_clients_title_text = get_theme_mod('zerif_aboutus_clients_title_text',__('OUR HAPPY CLIENTS','zerif-lite'));
 			
-				echo '<div class="our-clients">';
+				echo '<div class="">';
 				
 					if( !empty($zerif_aboutus_clients_title_text) ):
 				
-						echo '<h5><span class="section-footer-title">'.wp_kses_post($zerif_aboutus_clients_title_text).'</span></h5>';
+						// echo '<h5><span class="section-footer-title">'.wp_kses_post($zerif_aboutus_clients_title_text).'</span></h5>';
 						
 					else:
 					

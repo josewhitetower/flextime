@@ -182,7 +182,7 @@
 
   //  if 1, the element is considered in the viewport when it's fully visible
 
-      viewportFactor: 0.33
+      viewportFactor: 0.11
 
     },
 
