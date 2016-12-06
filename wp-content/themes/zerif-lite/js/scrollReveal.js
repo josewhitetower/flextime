@@ -174,7 +174,7 @@
 
       duration: '0.55s',
 
-      delay: '0.15s',
+      delay: '0s',
 
 
 
