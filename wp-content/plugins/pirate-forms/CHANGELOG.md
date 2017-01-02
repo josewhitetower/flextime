@@ -1,4 +1,22 @@
 
+### 1.1.3 - 20/12/2016
+**Changes:** 
+- Sync with wp.org
+
+### 1.1.2 - 20/12/2016
+**Changes:** 
+- Added upsell for custom emails plugin
+- Fixed text domains errors
+- Added travis and grunt
+
+### 1.1.1 - 19/12/2016
+**Changes:** 
+- Update changelog
+
+### 1.1.0 - 19/12/2016
+**Changes:** 
+- Escape form fields
+
 ### 1.0.18 - 07/11/2016
 **Changes:** 
 - Fixed php strict standards error
