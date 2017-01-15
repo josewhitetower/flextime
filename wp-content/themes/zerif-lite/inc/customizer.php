@@ -254,7 +254,16 @@ function zerif_customize_register( $wp_customize ) {
 			'section'  => 'zerif_general_socials_section',
 			'priority' => 9,
 		));
+     /* impressum */
+		$wp_customize->add_setting( 'zerif_socials_impressum', array(
+			'sanitize_callback' => 'esc_url_raw',
+		));
 
+		$wp_customize->add_control( 'zerif_socials_impressum', array(
+			'label'    => __( 'Impressum', 'zerif-lite' ),
+			'section'  => 'zerif_general_socials_section',
+			'priority' => 9,
+		));
 
 
 
@@ -1841,49 +1850,49 @@ function zerif_customize_register( $wp_customize ) {
 		'default' => __('Send Message','zerif-lite'),
 		'transport' => 'postMessage'
 	));
-			
+
 	$wp_customize->add_control( 'zerif_contactus_button_label', array(
 		'label'    => __( 'Button label', 'zerif-lite' ),
 		'section'  => 'zerif_contactus_section',
 		'priority'    => 5,
 	));
-	
+
 	/* recaptcha */
 	$wp_customize->add_setting( 'zerif_contactus_recaptcha_show', array(
 		'sanitize_callback' => 'zerif_sanitize_checkbox'
 	));
-	
+
 	$wp_customize->add_control( 'zerif_contactus_recaptcha_show', array(
 		'type' => 'checkbox',
 		'label' => __('Hide reCaptcha?','zerif-lite'),
 		'section' => 'zerif_contactus_section',
 		'priority'    => 6,
 	));
-	
+
 	/* site key */
 	$attribut_new_tab = (isset($zerif_accessibility) && ($zerif_accessibility != 1) ? ' target="_blank"' : '' );
 	$wp_customize->add_setting( 'zerif_contactus_sitekey', array(
 		'sanitize_callback' => 'sanitize_text_field'
 	));
-	
+
 	$wp_customize->add_control( 'zerif_contactus_sitekey', array(
 		'label'    => __( 'Site key', 'zerif-lite' ),
 		'description' => '<a'.$attribut_new_tab.' href="https://www.google.com/recaptcha/admin#list">'.__('Create an account here','zerif-lite').'</a> to get the Site key and the Secret key for the reCaptcha.',
 		'section'  => 'zerif_contactus_section',
 		'priority'    => 7,
 	));
-	
+
 	/* secret key */
 	$wp_customize->add_setting( 'zerif_contactus_secretkey', array(
 		'sanitize_callback' => 'sanitize_text_field'
 	));
-	
+
 	$wp_customize->add_control( 'zerif_contactus_secretkey', array(
 		'label'    => __( 'Secret key', 'zerif-lite' ),
 		'section'  => 'zerif_contactus_section',
 		'priority'    => 8,
 	));
-	
+
 }
 add_action( 'customize_register', 'zerif_customize_register' );
 
@@ -1942,7 +1951,7 @@ add_action( 'wp_ajax_nopriv_zerif_lite_dismiss_asking_for_reviews','zerif_lite_d
  * Dismiss asking for reviews
  */
 function zerif_lite_dismiss_asking_for_reviews_callback() {
-	
+
 	if( !empty($_POST['ask']) ) {
 		set_theme_mod('zerif_lite_ask_for_review',esc_attr($_POST['ask']));
 	}
@@ -1953,9 +1962,9 @@ function zerif_lite_dismiss_asking_for_reviews_callback() {
 add_action( 'customize_controls_enqueue_scripts', 'zerif_lite_asking_for_reviews_script' );
 
 function zerif_lite_asking_for_reviews_script() {
-	
+
 	$zerif_lite_review = 'yes';
-	
+
 	$zerif_lite_ask_for_review = get_theme_mod('zerif_lite_ask_for_review');
 	if( !empty($zerif_lite_ask_for_review) ) {
 		$zerif_lite_review = $zerif_lite_ask_for_review;
