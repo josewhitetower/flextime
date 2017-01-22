@@ -177,7 +177,7 @@
 						endif;
 
 						if( !empty($zerif_copyright) ):
-							echo '<p id="zerif-copyright">'.wp_kses_post($zerif_copyright).'</p>';
+							echo date('Y').'<p id="zerif-copyright">'.wp_kses_post($zerif_copyright).'</p>';
 						elseif( is_customize_preview() ):
 							echo '<p id="zerif-copyright" class="zerif_hidden_if_not_customizer"></p>';
 						endif;

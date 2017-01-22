@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 4.7.x package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-12-30 11:20:49+0000\n"
+"PO-Revision-Date: 2017-01-21 13:51:07+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -72,13 +72,13 @@ msgstr "Si el tipo de contenido debería tener hijo o no."
 msgid "Required to be true, as terms do not support trashing."
 msgstr "Se requiere que sea true, ya que los términos no son compatibles con el envío a la papelera."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-revisions-controller.php:100
-msgid "Required to be true, as revisions do not support trashing."
-msgstr "Se requiere que sea true, ya que las revisioines no son compatibles con el envío a la papelera."
-
 #: wp-includes/rest-api/endpoints/class-wp-rest-taxonomies-controller.php:268
 msgid "An alphanumeric identifier for the taxonomy."
 msgstr "Un identificador alfanumérico de la taxonomía."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-revisions-controller.php:100
+msgid "Required to be true, as revisions do not support trashing."
+msgstr "Se requiere que sea true, ya que las revisiones no son compatibles con el envío a la papelera."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-post-statuses-controller.php:287
 msgid "An alphanumeric identifier for the status."
@@ -1677,10 +1677,6 @@ msgstr "Haz clic para editar este menú."
 msgid "While you can crop images to your liking after clicking <strong>Add new image</strong>, we recommend matching the size of your video."
 msgstr "Aunque puedes recortar las imágenes que te gustan después de hacer clic en <strong>Añadir imagen</strong>, recomendamos que se ajuste al tamaño de tu vídeo."
 
-#: wp-includes/customize/class-wp-customize-custom-css-setting.php:219
-msgid "Imbalanced/unclosed character errors can be caused by <code>content: \"\";</code> declarations. You may need to remove this or add it to a custom CSS file."
-msgstr "Errores de caracteres desequilibrados o sin cerrar son causados por declaraciones como <code>contenido: \"\";</code>. Pues que necesites eliminarlo o añadirlo en un fichero CSS personalizado."
-
 #: wp-includes/customize/class-wp-customize-custom-css-setting.php:215
 msgid "There is an extra <code>*/</code>, indicating an end to a comment.  Be sure that there is an opening <code>/*</code> for every closing <code>*/</code>."
 msgstr "Hay un <code>*/</code> de más, indicando el final de un comentario. Asegúrate de que hay un <code>/*</code> abierto para cada <code>*/</code> cerrado."
@@ -1694,6 +1690,10 @@ msgstr[1] "Existen %s comentarios de código sin cerrar. Cierra cada comentario 
 #: wp-includes/customize/class-wp-customize-custom-css-setting.php:196
 msgid "Your double quotes <code>\"</code> are uneven. Make sure there is a closing <code>\"</code> for every opening <code>\"</code>."
 msgstr "Tus comillas dobles <code>\"</code> son desiguales. Asegurarse que exista un cierre <code>\"</code> para cada código abierto <code>\"</code>."
+
+#: wp-includes/customize/class-wp-customize-custom-css-setting.php:219
+msgid "Imbalanced/unclosed character errors can be caused by <code>content: \"\";</code> declarations. You may need to remove this or add it to a custom CSS file."
+msgstr "Los errores de caracteres sin balancear o sin cerrar los provocan por declaraciones como <code>contenido: \"\";</code>. Puede que necesites quitar esto o añadirlo en un fichero CSS personalizado."
 
 #: wp-includes/customize/class-wp-customize-custom-css-setting.php:171
 msgid "Markup is not allowed in CSS."
@@ -2743,12 +2743,6 @@ msgid "off"
 msgstr "off"
 
 #. translators: month name, genitive
-#: wp-includes/class-wp-locale.php:172
-msgctxt "genitive"
-msgid "January"
-msgstr "enero"
-
-#. translators: month name, genitive
 #: wp-includes/class-wp-locale.php:176
 msgctxt "genitive"
 msgid "May"
@@ -2771,6 +2765,12 @@ msgstr "Marzo"
 msgctxt "genitive"
 msgid "February"
 msgstr "Febrero"
+
+#. translators: month name, genitive
+#: wp-includes/class-wp-locale.php:172
+msgctxt "genitive"
+msgid "January"
+msgstr "Enero"
 
 #: wp-includes/embed.php:992
 msgid "Sharing options"
